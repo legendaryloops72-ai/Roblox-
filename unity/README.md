@@ -17,6 +17,8 @@ Unity owns 3D scene generation and cinematic rendering. Android remains the stor
 - BlockCharacterBuilder creates a six-part block character prototype.
 - StorySceneBootstrap loads the JSON and builds the stage and characters.
 - Sample JSON: Assets/StreamingAssets/sample_story_scene.json.
+- StoryCinematicShotPlayer creates Cinemachine cameras from shot data and sequences them using a CinemachineBrain on the output camera.
+- StoryTimelinePlayback plays an authored TimelineAsset through PlayableDirector.
 
 ## Open in Unity
 1. Open the unity folder with Unity 6000.5 and install the packages from Packages/manifest.json.
