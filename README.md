@@ -25,10 +25,19 @@ The project currently uses the legacy Kotlin Android Gradle plugin compatibility
 ## CI
 GitHub Actions runs unit tests and assembles a debug APK on pushes to `main` and `develop`, and on pull requests targeting `main`. The APK is uploaded as the `roblox-story-ai-debug-apk` workflow artifact.
 
+## Skill pipeline research and current additions
+- Open-source skill register: `docs/OPEN_SOURCE_SKILLS.md`.
+- Unity runtime plan and pinned official packages: `unity/README.md` and `unity/Packages/manifest.json`.
+- AI story JSON/security contract: `docs/AI_STORY_PIPELINE.md`.
+- Voice and Arabic TTS evaluation: `docs/VOICE_PIPELINE.md`.
+- MP4 export architecture: `docs/VIDEO_PIPELINE.md`.
+- Android Media3 Transformer 1.11.1 dependencies and a single-clip H.264/AAC MP4 export adapter are now included.
+
 ## Planned integrations
-1. Secure backend for Gemini story generation. Never place a Gemini API key in the Android app.
+1. Firebase AI Logic structured output with server prompt templates and App Check.
 2. Firebase authentication and cloud project sync.
-3. Unity as a separately integrated 3D runtime after the Android foundation is stable.
-4. Scene editor, character/asset library, preview and MP4 export.
+3. Unity 6.5 runtime for voxel worlds, characters, animation, Cinemachine and Timeline.
+4. Arabic and Iraqi dialect voice selection, word/phoneme alignment and lip sync.
+5. Multi-shot Unity rendering, audio mixing, subtitles and full-story MP4 export.
 
 **Important:** The current offline outline generator is a local prototype, not Gemini AI. Unity rendering, cloud sync, and MP4 export are not implemented yet.
