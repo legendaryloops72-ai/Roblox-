@@ -25,8 +25,8 @@ class VideoExportManager(context: Context) {
     fun exportSingleClip(
         inputUri: Uri,
         outputFile: File,
-        onCompleted: (File) -> Unit,
-        onError: (Throwable) -> Unit
+        onExportCompleted: (File) -> Unit,
+        onExportError: (Throwable) -> Unit
     ) {
         require(outputFile.parentFile?.exists() == true) {
             "Output directory must exist before export."
@@ -40,7 +40,7 @@ class VideoExportManager(context: Context) {
         val listener = object : Transformer.Listener {
             override fun onCompleted(composition: Composition, exportResult: ExportResult) {
                 activeTransformer = null
-                onCompleted(outputFile)
+                onExportCompleted(outputFile)
             }
 
             override fun onError(
@@ -49,7 +49,7 @@ class VideoExportManager(context: Context) {
                 exportException: ExportException
             ) {
                 activeTransformer = null
-                onError(exportException)
+                onExportError(exportException)
             }
         }
 
