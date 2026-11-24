@@ -2,7 +2,7 @@ using UnityEngine;
 namespace RobloxStoryAI {
  public sealed class BlockCharacterBuilder {
   public GameObject Build(CharacterDefinition d,Transform parent) {
-   var root=new GameObject(string.IsNullOrWhiteSpace(d.displayName)?d.id:d.displayName); root.transform.SetParent(parent,false);
+   var root=new GameObject(d.id); root.transform.SetParent(parent,false);
    root.transform.localPosition=d.position; root.transform.localScale=Vector3.Max(d.scale,Vector3.one*0.1f);
    Color body; if(!ColorUtility.TryParseHtmlString(d.colorHex,out body))body=new Color(.25f,.5f,.8f);
    Part(root.transform,"Torso",new Vector3(0,1.35f,0),new Vector3(.85f,.9f,.45f),body);
