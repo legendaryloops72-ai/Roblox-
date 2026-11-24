@@ -1,0 +1,17 @@
+{
+ "schemaVersion":1,"title":"The First Portal","output":{"width":1920,"height":1080,"frameRate":30},
+ "characters":[
+  {"id":"hero","displayName":"Hero","position":{"x":0,"y":0,"z":0},"scale":{"x":1,"y":1,"z":1},"colorHex":"#3976C6"},
+  {"id":"guide","displayName":"Guide","position":{"x":2,"y":0,"z":1},"scale":{"x":1,"y":1,"z":1},"colorHex":"#4D9B74"}
+ ],
+ "blocks":[
+  {"position":{"x":0,"y":-0.5,"z":0},"scale":{"x":12,"y":1,"z":12},"colorHex":"#71845C"},
+  {"position":{"x":0,"y":1,"z":5},"scale":{"x":3,"y":3,"z":1},"colorHex":"#6A4935"},
+  {"position":{"x":-2,"y":0.5,"z":5},"scale":{"x":1,"y":1,"z":1},"colorHex":"#A9C7D9"},
+  {"position":{"x":2,"y":0.5,"z":5},"scale":{"x":1,"y":1,"z":1},"colorHex":"#A9C7D9"}
+ ],
+ "shots":[
+  {"id":"establishing","subjectCharacterId":"hero","durationSeconds":5,"framing":"wide","cameraPosition":{"x":0,"y":5,"z":-10},"lookAtOffset":{"x":0,"y":1,"z":0},"transition":"fade"},
+  {"id":"hero-closeup","subjectCharacterId":"hero","durationSeconds":3,"framing":"close-up","cameraPosition":{"x":-2,"y":3,"z":-3},"lookAtOffset":{"x":0,"y":1.8,"z":0},"transition":"cut"}
+ ]
+}
