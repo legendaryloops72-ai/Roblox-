@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.cart3r.robloxstoryai"
-        minSdk = 26
+        minSdk = 24
         targetSdk = 36
         versionCode = 1
         versionName = "0.1.0"
