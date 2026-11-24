@@ -32,3 +32,6 @@ GitHub Actions runs unit tests and assembles a debug APK on pushes to `main` and
 4. Scene editor, character/asset library, preview and MP4 export.
 
 **Important:** The current offline outline generator is a local prototype, not Gemini AI. Unity rendering, cloud sync, and MP4 export are not implemented yet.
+
+
+CI verification branch created to validate the Android build pipeline.
