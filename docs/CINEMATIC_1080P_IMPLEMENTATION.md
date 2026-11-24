@@ -18,11 +18,11 @@ Final output is landscape 1920x1080, 30 fps, 16:9. Lower-resolution previews may
 ## Next milestones
 1. Open unity in Unity 6000.5, install packages, create URP scene, attach StorySceneBootstrap and VoxelStageBuilder, and assign the sample JSON.
 2. Add Animator controllers and Animation Rigging; validate idle/walk/run/jump/wave.
-3. Convert ShotDefinition into Cinemachine camera states and Timeline tracks with deterministic timing.
+3. Cinemachine camera instances are now created from ShotDefinition and sequenced by StoryCinematicShotPlayer. Next, generate Timeline tracks from the same shot data and validate blends and shot timing.
 4. Capture each shot at 1920x1080/30 fps and emit ordered clips plus audio stems.
 5. Compose clips, dialogue, music, sound effects, subtitles and transitions through Media3.
 6. Add Unity Android build and bridge after standalone scene build and device profiling pass.
 ## Quality gates
 Verify output MP4 dimensions and frame rate, GPU frame time, memory, thermal behavior, battery and render duration on a representative Android device. Bound voxel count and character count. Move rendering to a licensed cloud worker if target devices cannot sustain 1080p.
 ## Limitations
-This is a Unity runtime scaffold, not a completed film renderer. Cinemachine cameras, Timeline tracks, character animation, speech synthesis, frame capture and complete multi-shot MP4 composition are not yet implemented. Unity Editor and Android build verification remain required.
+This is a Unity runtime scaffold, not a completed film renderer. Runtime Cinemachine camera creation and shot sequencing are scaffolded. Dynamic Timeline track generation, character animation, speech synthesis, frame capture and complete multi-shot MP4 composition are not yet implemented. Unity Editor and Android build verification remain required.
