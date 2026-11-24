@@ -49,7 +49,7 @@ class StoryRepository(context: Context) {
         val array = JSONArray()
         updated.forEach { item ->
             val scenes = JSONArray()
-            item.scenes.forEach(scenes::put)
+            item.scenes.forEach { scene -> scenes.put(scene) }
             array.put(
                 JSONObject()
                     .put("id", item.id)
@@ -69,7 +69,7 @@ class StoryRepository(context: Context) {
         val array = JSONArray()
         updated.forEach { item ->
             val scenes = JSONArray()
-            item.scenes.forEach(scenes::put)
+            item.scenes.forEach { scene -> scenes.put(scene) }
             array.put(
                 JSONObject()
                     .put("id", item.id)
